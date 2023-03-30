@@ -1,4 +1,5 @@
-class Restorer extends LeavingCreature{
+let LeavingCreature = require("./LivingCreature")
+module.exports = class Restorer extends  LeavingCreature{
     constructor(x, y) {
     super(x,y)
         this.energy = 6;
@@ -24,8 +25,8 @@ class Restorer extends LeavingCreature{
     }
     mul() {
         this.multiply++;
-        var emptyCells = this.chooseCell(3);
-        var newCell = random(emptyCells);
+        var emptyCells = this.chooseCell(0)
+        var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
 
         console.log(emptyCells);
         if (newCell && this.multiply >= 15) {

@@ -1,4 +1,5 @@
-class PrEater extends LeavingCreature{
+let LeavingCreature = require("./LivingCreature")
+module.exports = class PrEater extends  LeavingCreature{
     constructor(x, y) {
         super(x,y)
 
